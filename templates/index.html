@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommendation System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- HEADER CREATE -->
+    <header>
+
+    <div class="logo">🎬 MovieRec</div>
+
+    <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+
+
+</nav>
+</header>
+ 
+
+    <div class="container">
+
+        <h1>🎬 Movie Recommendation System</h1>
+
+        <form method="POST">
+
+       <input
+    type="text"
+    name="movie"
+    list="movies"
+    placeholder="Search Movie..."
+    required>
+
+<datalist id="movies">
+    {% for movie in movies %}
+    <option value="{{ movie }}">
+    {% endfor %}
+
+
+</datalist>
+            <br><br>
+
+            <button type="submit">Recommend</button>
+
+        </form>
+
+        <br>
+
+        <h2>Recommended Movies</h2>
+        <ul>
+
+            {% for movie in recommendations %}
+            <li>{{ movie }}</li>
+            {% endfor %}
+
+        </ul>
+
+
+
+    </div>
+<!-- #FOOTER CREATE -->
+<footer>
+    <p>© 2026 Movie Recommendation System | Developed by SOUVIK SANTRA</p>
+</footer>
+
+
+
+
+
+</body>
+
+</html>
