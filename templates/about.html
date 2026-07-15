@@ -3,18 +3,57 @@
 <head>
     <title>About</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-    <div class="logo">🎬 MovieRec</div>
+    <!-- HEADER CREATE -->
+    <header>
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </nav>
+    <div class="logo">🎥 MovieRec</div>
+
+<nav>
+
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+
+    <div class="user-menu">
+
+        <button class="profile-btn">
+
+    <img src="{{ url_for('static', filename='images/user.png') }}" class="profile-image">
+
+</button>
+
+        <div class="dropdown">
+
+            <a href="/profile">
+
+    <img src="{{ url_for('static', filename='images/user.png') }}" class="menu-icon">
+
+    Profile
+
+</a>
+
+<a href="/logout">
+
+    <img src="{{ url_for('static', filename='images/logout.png') }}" class="menu-icon">
+
+    Logout
+
+</a>
+
+        </div>
+
+    </div>
+
+</nav>
 </header>
 
 <div class="container">
@@ -30,6 +69,7 @@ It is built using Python, Flask, Pandas, HTML, CSS and Machine Learning.
 
 <ul>
 <li>Python</li>
+<li>Jupyter Notebook</li>
 <li>Flask</li>
 <li>Pandas</li>
 <li>HTML</li>

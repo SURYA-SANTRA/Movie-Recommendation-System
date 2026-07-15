@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Profile</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='profile.css') }}">
+
+</head>
+
+<body>
+
+<div class="profile-card">
+
+    <img src="{{ url_for('static', filename='images/profile.png') }}"
+         class="profile-img">
+
+    <h2>{{ user.name }}</h2>
+
+    <p>{{ user.email }}</p>
+
+    <a href="/">🏠 Home</a>
+
+</div>
+
+</body>
+</html>

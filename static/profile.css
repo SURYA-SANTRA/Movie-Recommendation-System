@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:100vh;
+
+    background:url("images/mv_background_image3.jpg");
+
+    background-size:cover;
+
+}
+
+.profile-card{
+
+    width:400px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+}
+
+.profile-img{
+
+    width:120px;
+
+    border-radius:50%;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    margin-bottom:10px;
+
+}
+
+p{
+
+    color:#ddd;
+
+    margin-bottom:30px;
+
+}
+
+a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#e50914;
+
+    padding:12px 30px;
+
+    border-radius:10px;
+
+}

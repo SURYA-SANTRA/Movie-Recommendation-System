@@ -4,19 +4,54 @@
     <title>Movie Recommendation System</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- HEADER CREATE -->
     <header>
 
-    <div class="logo">🎬 MovieRec</div>
+    <div class="logo">🎥 MovieRec</div>
 
-    <nav>
-    <a href="/">Home</a>
+<nav>
+
+    <a href="{{ url_for('home') }}">Home</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
 
+    <div class="user-menu">
+
+        <button class="profile-btn">
+
+    <img src="{{ url_for('static', filename='images/user.png') }}" class="profile-image">
+
+</button>
+
+        <div class="dropdown">
+
+            <a href="/profile">
+
+    <img src="{{ url_for('static', filename='images/user.png') }}" class="menu-icon">
+
+    Profile
+
+</a>
+
+<a href="/logout">
+
+    <img src="{{ url_for('static', filename='images/logout.png') }}" class="menu-icon">
+
+    Logout
+
+</a>
+
+        </div>
+
+    </div>
 
 </nav>
 </header>
@@ -62,6 +97,8 @@
 
 
     </div>
+    
+</div>
 <!-- #FOOTER CREATE -->
 <footer>
     <p>© 2026 Movie Recommendation System | Developed by SOUVIK SANTRA</p>

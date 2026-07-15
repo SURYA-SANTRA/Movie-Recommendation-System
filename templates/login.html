@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | MovieRec</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='login.css') }}">
+
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="login-card">
+
+        <div class="logo">
+
+            
+
+            <h1>MovieRec</h1>
+
+            <p>Welcome Back</p>
+
+        </div>
+
+        <form method="POST">
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    required>
+
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required>
+
+                <i class="fa-solid fa-eye"
+                    id="togglePassword"></i>
+
+            </div>
+
+            <button>
+
+                Login
+
+            </button>
+
+        </form>
+
+        <div class="extra">
+
+            <a href="#">Forgot Password?</a>
+
+        </div>
+
+        <div class="register">
+
+            Don't have an account?
+
+            <a href="/register">
+
+                Register
+
+            </a>
+
+        </div>
+
+    </div>
+
+<script>
+
+const toggle=document.getElementById("togglePassword");
+
+const password=document.getElementById("password");
+
+toggle.onclick=function(){
+
+if(password.type==="password"){
+
+password.type="text";
+
+toggle.classList.remove("fa-eye");
+
+toggle.classList.add("fa-eye-slash");
+
+}
+
+else{
+
+password.type="password";
+
+toggle.classList.remove("fa-eye-slash");
+
+toggle.classList.add("fa-eye");
+
+}
+
+}
+
+</script>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
